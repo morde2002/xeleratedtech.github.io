@@ -135,3 +135,38 @@ jQuery(document).ready(function($) {
     });
 
 });
+
+// Wait for all images and other resources to be loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Hide the loader when the page is fully loaded
+    var loader = document.getElementById("loader");
+    loader.style.display = "none";
+
+    // Show the wrapper content after hiding the loader
+    var wrapper = document.getElementById("wrapper");
+    wrapper.style.display = "block";
+});
+
+
+
+
+
+		$(document).ready(function(){
+			$(".w-tabs-section-header").click(function(){
+				// Toggle the active class on button click
+				$(this).parent().toggleClass("active");
+			});
+		});
+
+		$(document).ready(function() {
+			// Add scrolled class to header when the page is scrolled
+			$(window).scroll(function() {
+				if ($(this).scrollTop() > 50) { // Adjust the scrolling threshold as needed
+					$('.navbar-fixed-top').addClass('scrolled');
+					$('.navbar-nav').addClass('black-links');
+				} else {
+					$('.navbar-fixed-top').removeClass('scrolled');
+					$('.navbar-nav').removeClass('black-links');
+				}
+			});
+		});
