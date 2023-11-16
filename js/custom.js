@@ -170,3 +170,25 @@ document.addEventListener("DOMContentLoaded", function() {
 				}
 			});
 		});
+
+		// JavaScript for Bootstrap carousel initialization
+$(document).ready(function() {
+    $('#design-carousel').carousel({
+        interval: 1000, // Change the interval as needed (in milliseconds)
+        pause: "hover" // Pause on hover
+    });
+});
+
+
+$(document).ready(function() {
+	// Add scrolled class to header when the page is scrolled
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 50) { // Adjust the scrolling threshold as needed
+			$('.navbar-static-top').addClass('scrolled');
+			$('.navbar-nav').addClass('black-links');
+		} else {
+			$('.navbar-static-top').removeClass('scrolled');
+			$('.navbar-nav').removeClass('black-links');
+		}
+	});
+});
